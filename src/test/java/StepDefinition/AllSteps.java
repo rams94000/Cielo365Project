@@ -106,7 +106,7 @@ public class AllSteps extends BaseCalss2 {
 	public void user_should_be_able_to_view_dashboard_page() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	    System.out.println(driver.getTitle());
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	    
 	
 		
 	}
@@ -165,11 +165,6 @@ public class AllSteps extends BaseCalss2 {
 		    for (WebElement row : finalRows) {
 		        uniqueRows.add(row.getText().trim());
 		    }
-<<<<<<< HEAD
-=======
-
-		    //  Try to find and click the next button
->>>>>>> 475115a155d6cf0af07986756e2c88f72ab7d202
 		    try {
 		        WebElement nextButton = driver.findElement(By.cssSelector("button[aria-label='Go to next page']"));
 		        if (nextButton.isEnabled()) {
@@ -184,13 +179,7 @@ public class AllSteps extends BaseCalss2 {
 		        break;
 		    }
 		}
-<<<<<<< HEAD
 		System.out.println("Total unique rows captured: " + uniqueRows.size());
-=======
-
-		// Print all unique rows from all pages
-		System.out.println(" Total unique rows captured: " + uniqueRows.size());
->>>>>>> 475115a155d6cf0af07986756e2c88f72ab7d202
 		for (String rowText : uniqueRows) {
 		    System.out.println(rowText);
 		}

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 17 14:27:28 IST 2025</td>
+<td>Started on:</td><td>Fri Oct 17 14:47:22 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>106 seconds (106107 ms)</td>
+<tr><td>Total time:</td><td>91 seconds (91038 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,41 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether user is able to create carholder by entering valid data", "Functional Testing"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to no longer be visible: By.cssSelector: .loader-container (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.77, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\rams9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62415}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62415/devtoo..., se:cdpVersion: 141.0.7390.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6700319b14e0c517281bed12e5fa329
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at StepDefinition.AllSteps.click_on_drop_down_and_select_the_value(AllSteps.java:95)
-	at ✽.Click on drop down and select the value(file:///C:/Users/rams9/eclipse-workspace/Cielo365Project/./Feature/Feature.feature:50)
-</pre></div><a href='#' onClick='toggleBox("stack-trace290509937", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace290509937'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to no longer be visible: By.cssSelector: .loader-container (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.77, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\rams9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62415}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62415/devtoo..., se:cdpVersion: 141.0.7390.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6700319b14e0c517281bed12e5fa329
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at StepDefinition.AllSteps.click_on_drop_down_and_select_the_value(AllSteps.java:95)
-	at ✽.Click on drop down and select the value(file:///C:/Users/rams9/eclipse-workspace/Cielo365Project/./Feature/Feature.feature:50)
-</pre></div></td>
-<td>43</td>
-<td>RunnerPackage.RunnerClass@41f69e84</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -113,12 +78,17 @@ Session ID: d6700319b14e0c517281bed12e5fa329
 <tr>
 <td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether user is able to login the application with valid credentials", "Functional Testing"</td>
 <td></td>
-<td>21</td>
+<td>14</td>
+<td>RunnerPackage.RunnerClass@41f69e84</td></tr>
+<tr>
+<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether user is able to create carholder by entering valid data", "Functional Testing"</td>
+<td></td>
+<td>39</td>
 <td>RunnerPackage.RunnerClass@41f69e84</td></tr>
 <tr>
 <td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether after login the application user is able to perform click operation in cardholder module", "Functional Testing"</td>
 <td></td>
-<td>41</td>
+<td>36</td>
 <td>RunnerPackage.RunnerClass@41f69e84</td></tr>
 </table><p>
 </body>
