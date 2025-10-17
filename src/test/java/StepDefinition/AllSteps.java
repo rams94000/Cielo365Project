@@ -14,6 +14,8 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -24,7 +26,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import PageObjectModel.SignInClass;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
 
 public class AllSteps extends BaseCalss2 {
@@ -100,7 +104,9 @@ public class AllSteps extends BaseCalss2 {
 
 	@Then("User should be able to view dashboard page")
 	public void user_should_be_able_to_view_dashboard_page() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	    System.out.println(driver.getTitle());
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	
 		
 	}
@@ -127,36 +133,22 @@ public class AllSteps extends BaseCalss2 {
 	@Then("User should be able to view all records of cardholders on console")
 	public void user_should_be_able_to_view_all_records_of_cardholders_on_console() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
-		// Locate the virtual scroller container (main scrollable div)
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		WebElement grid = driver.findElement(By.cssSelector("div.MuiDataGrid-virtualScroller"));
-
-		// To store unique rows across all pages
 		Set<String> uniqueRows = new LinkedHashSet<>();
-
-		while (true) { // loop through pages
+		while (true) { 
 		    long lastScrollTop = -1;
 		    int sameScrollCount = 0;
-
-		    // Scroll through the current page to capture all visible rows
 		    while (true) {
-		        // Capture visible rows
 		        List<WebElement> rows = driver.findElements(By.cssSelector("div[role='row'][data-rowindex]"));
 		        for (WebElement row : rows) {
 		            uniqueRows.add(row.getText().trim());
 		        }
-
-		        // Scroll down
 		        js.executeScript("arguments[0].scrollTop = arguments[0].scrollTop + 600;", grid);
 		        Thread.sleep(1200);
-
-		        // Scroll metrics
 		        long currentScrollTop = ((Number) js.executeScript("return arguments[0].scrollTop;", grid)).longValue();
 		        long scrollHeight = ((Number) js.executeScript("return arguments[0].scrollHeight;", grid)).longValue();
 		        long clientHeight = ((Number) js.executeScript("return arguments[0].clientHeight;", grid)).longValue();
-
-		        // Detect end condition
 		        if (currentScrollTop == lastScrollTop) {
 		            sameScrollCount++;
 		        } else {
@@ -164,36 +156,30 @@ public class AllSteps extends BaseCalss2 {
 		        }
 
 		        if (currentScrollTop + clientHeight >= scrollHeight || sameScrollCount >= 3) {
-		            break; // done scrolling this page
+		            break;
 		        }
 
 		        lastScrollTop = currentScrollTop;
 		    }
-
-		    // Final capture for this page
 		    List<WebElement> finalRows = driver.findElements(By.cssSelector("div[role='row'][data-rowindex]"));
 		    for (WebElement row : finalRows) {
 		        uniqueRows.add(row.getText().trim());
 		    }
-
-		    // ✅ Try to find and click the next button
 		    try {
 		        WebElement nextButton = driver.findElement(By.cssSelector("button[aria-label='Go to next page']"));
 		        if (nextButton.isEnabled()) {
 		            nextButton.click();
-		            Thread.sleep(2000); // wait for new page to load
-		            grid = driver.findElement(By.cssSelector("div.MuiDataGrid-virtualScroller")); // re-locate grid
+		            Thread.sleep(2000);
+		            grid = driver.findElement(By.cssSelector("div.MuiDataGrid-virtualScroller"));
 		        } else {
-		            break; // next button disabled → last page reached
+		            break;
 		        }
 		    } catch (NoSuchElementException e) {
 		        System.out.println("No next page button found — reached last page.");
 		        break;
 		    }
 		}
-
-		// Print all unique rows from all pages
-		System.out.println("✅ Total unique rows captured: " + uniqueRows.size());
+		System.out.println("Total unique rows captured: " + uniqueRows.size());
 		for (String rowText : uniqueRows) {
 		    System.out.println(rowText);
 		}
@@ -226,12 +212,8 @@ public class AllSteps extends BaseCalss2 {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement addButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[text()='Add'])[1]")));
-
-		// Scroll into view
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addButton);
-		Thread.sleep(500); // small pause to stabilize
-
-		// Click using JS (bypasses overlay issues)
+		Thread.sleep(500);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addButton);
 
 		
@@ -246,11 +228,15 @@ public class AllSteps extends BaseCalss2 {
 		
 	}
 	
-	
-	
-	
-	
+	@After
+	public void failedScenarios(Scenario sc) {
+		if(sc.isFailed()==true) {
+		final byte[] s=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+		sc.attach(s, "img/png", sc.getName());
 	}
+		driver.quit();
+}
+}
 	
 	
 
