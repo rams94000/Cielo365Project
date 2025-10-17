@@ -176,7 +176,7 @@ public class AllSteps extends BaseCalss2 {
 		        uniqueRows.add(row.getText().trim());
 		    }
 
-		    // ✅ Try to find and click the next button
+		    //  Try to find and click the next button
 		    try {
 		        WebElement nextButton = driver.findElement(By.cssSelector("button[aria-label='Go to next page']"));
 		        if (nextButton.isEnabled()) {
@@ -193,7 +193,7 @@ public class AllSteps extends BaseCalss2 {
 		}
 
 		// Print all unique rows from all pages
-		System.out.println("✅ Total unique rows captured: " + uniqueRows.size());
+		System.out.println(" Total unique rows captured: " + uniqueRows.size());
 		for (String rowText : uniqueRows) {
 		    System.out.println(rowText);
 		}
