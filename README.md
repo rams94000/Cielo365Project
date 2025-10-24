@@ -11,7 +11,7 @@ Designed and executed test cases to validate security, performance, and function
 Automated regression test cases using Selenium with Java and TestNG to ensure reliability and stability.
 
 Technologies Used:
-Devices: Omni-20, Omni-30, ProFace X, Controller and Readers (for biometric access control)
+Devices: Omni-20, Omni-30, ProFace X, Controller and Reader (for biometric access control)
 Languages: Java
 Automation Tool: Selenium WebDriver
 Frameworks: BDD (Behavior Driven Development)
