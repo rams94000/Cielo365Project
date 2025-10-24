@@ -32,7 +32,9 @@ public class SignInClass {
 	private By Enter_Email=By.name("email");
 	private By Click_AddBtn=By.xpath("(//button[text()='Add'])[1]");
 	private By Print_SuccessMsg=By.xpath("//p[text()='Cardholder created. It may take a few minutes to reflect on the device.']");
+		
 	
+
 	public By getPrint_SuccessMsg() {
 		return Print_SuccessMsg;
 	}

@@ -5,14 +5,15 @@ import java.util.Properties;
 import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 
+import PageObjectModel.DepartmentClass;
 import PageObjectModel.SignInClass;
 
 public class BaseCalss2 {
 	public WebDriver driver;
 	public SignInClass sign;
 	public Properties pro;
+	public DepartmentClass department;
 	
-
 	public String enterId() {
 		return RandomStringUtils.randomNumeric(3);
 	}
@@ -25,5 +26,4 @@ public class BaseCalss2 {
 	public String enterEmail() {
 		return RandomStringUtils.randomAlphanumeric(3)+"@gmail.com";
 	}
-
 }
