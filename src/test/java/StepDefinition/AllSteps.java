@@ -31,6 +31,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import PageObjectModel.DepartmentClass;
+import PageObjectModel.PositionClass;
 import PageObjectModel.SignInClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -73,6 +74,7 @@ public class AllSteps extends BaseCalss2 {
 		driver.get(pro.getProperty("url"));
 		sign=new SignInClass(driver);
 		department=new DepartmentClass(driver);
+		position=new PositionClass(driver);
 	    
 	}
 	@When("Enter username and password")
@@ -114,7 +116,7 @@ public class AllSteps extends BaseCalss2 {
 	@Given("Click on cardholder module")
 	public void click_on_cardholder_module() throws InterruptedException {
 		wait=new WebDriverWait(driver,Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".loader-container")));	;
+		//wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".loader-container")));	;
 	    WebElement click=wait.until(ExpectedConditions.elementToBeClickable(sign.getClick_CardholderModule()));
 	    click.click();   
 	}
@@ -401,14 +403,64 @@ public class AllSteps extends BaseCalss2 {
 		}
 	}
 
+	//Postion Test cases
 	
+	@Then("Click on position submodule")
+	public void click_on_position_submodule() {
+	    driver.findElement(position.getClickOnPostionsubmodule()).click();
+		
+	}
+	@Then("Click on create postion icon button")
+	public void click_on_create_postion_icon_button() throws InterruptedException {
+		//wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".loader-container")));
+		wait=new WebDriverWait(driver,Duration.ofSeconds(15));
+	    wait.until(ExpectedConditions.elementToBeClickable(position.getClickOnCreateIconButton())).click();
+		
+	}
+	@Then("Enter the all the data in postion page")
+	public void enter_the_all_the_data_in_postion_page() {
+		driver.findElement(position.getEnterPostionData()).sendKeys(enterFirstName());
+	    driver.findElement(position.getEnterCode()).sendKeys(enterId());
+	    
+		
+	}
+	@Then("Click on Add button of postions")
+	public void click_on_add_button_of_postions() {
+		driver.findElement(position.getClickOnAddBtn()).click();
+		
+	}
+	@Then("User should be able to view the success message of created position")
+	public void user_should_be_able_to_view_the_success_message_of_created_position() {
+	    
+		WebElement success=driver.findElement(position.getPrintSuccessMsgOfPosition());
+		String printsuccessmsg=success.getText();
+		System.out.println(printsuccessmsg);
+		
+	}
+	
+	@Then("Click on Position delete button")
+	public void click_on_position_delete_button() {
+	    driver.findElement(position.getClickonDeletebutton()).click();
+		
+	}
+	@Then("Click on delete button")
+	public void click_on_delete_button() {
+	    driver.findElement(position.getClickOnDeleteBtn()).click();
+	}
+	@Then("User should be able to view delete success message")
+	public void user_should_be_able_to_view_delete_success_message() {
+	    WebElement success=driver.findElement(position.getPrintSeccessMesgOfDelete());
+	    String printsuccessmesg=success.getText();
+	    System.out.println(printsuccessmesg);
+	}
+
 	@After
 	public void failedScenarios(Scenario sc) {
 		if(sc.isFailed()==true) {
 		final byte[] s=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		sc.attach(s, "img/png", sc.getName());
 	}
-		driver.quit();
+	driver.quit();
 }
 }
 	

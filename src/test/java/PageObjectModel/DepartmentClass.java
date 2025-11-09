@@ -10,7 +10,7 @@ import io.cucumber.java.en.*;
 public class DepartmentClass {
 	
 	
-WebDriver driverG;
+ WebDriver driverG;
 	
 	public DepartmentClass(WebDriver driverL) {
 		driverG=driverL;

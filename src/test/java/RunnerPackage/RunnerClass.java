@@ -8,10 +8,11 @@ import io.cucumber.testng.CucumberOptions;
 		          glue="StepDefinition",
 		          monochrome=true,
 		          dryRun=false,
-		          tags="@tag1",
-		          plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+		          tags="@tag",
+		          plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}          
 		)
 
 public class RunnerClass extends AbstractTestNGCucumberTests {
 
 }
+ 
