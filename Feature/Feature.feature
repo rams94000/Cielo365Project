@@ -137,6 +137,20 @@ Feature: Functional Testing
     And Click on Position delete button
     And Click on delete button
     Then User should be able to view delete success message
+    @tag11
+    Scenario: Verify whether user is able to upload the profile with valid extension
+    Given Enter the URL
+    When Enter username and password
+    And Click on privacy checkbox
+    And Click on Signin button
+    And Click on drop down and select the value
+    And Click on Enter button
+    Then User should be able to view dashboard page
+    And Click on profile icon
+    And Click on my profile
+    And Upload the image from the System
+    And Click on Save button
+    Then User should be able to view success message after uploading the image
     
     
     

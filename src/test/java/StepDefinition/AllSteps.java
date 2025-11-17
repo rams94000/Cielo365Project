@@ -32,11 +32,13 @@ import org.testng.Assert;
 
 import PageObjectModel.DepartmentClass;
 import PageObjectModel.PositionClass;
+import PageObjectModel.ProfileClass;
 import PageObjectModel.SignInClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AllSteps extends BaseCalss2 {
 	WebDriverWait wait;
@@ -49,6 +51,7 @@ public class AllSteps extends BaseCalss2 {
 	String browser=pro.getProperty("browser");
 	switch(browser.toLowerCase()) {
 	case "chrome":
+		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		break;
@@ -75,6 +78,7 @@ public class AllSteps extends BaseCalss2 {
 		sign=new SignInClass(driver);
 		department=new DepartmentClass(driver);
 		position=new PositionClass(driver);
+		profile=new ProfileClass(driver);
 	    
 	}
 	@When("Enter username and password")
@@ -453,7 +457,46 @@ public class AllSteps extends BaseCalss2 {
 	    String printsuccessmesg=success.getText();
 	    System.out.println(printsuccessmesg);
 	}
-
+	@Then("Click on profile icon")
+	public void click_on_profile_icon() throws InterruptedException {
+		wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+		WebElement profileclick=wait.until(ExpectedConditions.elementToBeClickable(profile.getClickonprofileBtn()));
+		JavascriptExecutor j=(JavascriptExecutor)driver;
+		j.executeScript("arguments[0].click();",profileclick );
+		
+	}
+	@Then("Click on my profile")
+	public void click_on_my_profile() {
+		wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+		WebElement Myprofileclick=wait.until(ExpectedConditions.elementToBeClickable(profile.getClickonMyprofile()));
+		JavascriptExecutor j=(JavascriptExecutor)driver;
+		j.executeScript("arguments[0].click();",Myprofileclick );
+		
+	}
+	@Then("Upload the image from the System")
+	public void upload_the_image_from_the_system() throws AWTException {
+		wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+		WebElement clickonchoosefile=wait.until(ExpectedConditions.elementToBeClickable(profile.getClickOnchooseFile()));
+		JavascriptExecutor j=(JavascriptExecutor)driver;
+		j.executeScript("arguments[0].click();",clickonchoosefile );
+		Robot rb=new Robot();
+		rb.delay(2000);
+		StringSelection s=new StringSelection("Downloads\\WhatsApp Image 2025-06-15 at 15.56.05_4a9f90ed");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(s, null);
+		rb.keyPress(KeyEvent.VK_CONTROL);
+		rb.keyPress(KeyEvent.VK_V);
+		rb.keyRelease(KeyEvent.VK_CONTROL);
+		rb.keyRelease(KeyEvent.VK_V);
+		rb.keyPress(KeyEvent.VK_ENTER);
+		rb.keyRelease(KeyEvent.VK_ENTER);   
+	}
+	@Then("User should be able to view success message after uploading the image")
+	public void user_should_be_able_to_view_success_message_after_uploading_the_image() {
+	    
+		WebElement success=driver.findElement(profile.getPrintsuccessmsg());
+		String printsuccess=success.getText();
+		System.out.println(printsuccess);
+	}
 	@After
 	public void failedScenarios(Scenario sc) {
 		if(sc.isFailed()==true) {

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 import PageObjectModel.DepartmentClass;
 import PageObjectModel.PositionClass;
+import PageObjectModel.ProfileClass;
 import PageObjectModel.SignInClass;
 
 public class BaseCalss2 {
@@ -15,6 +16,7 @@ public class BaseCalss2 {
 	public Properties pro;
 	public DepartmentClass department;
 	public PositionClass position;
+	public ProfileClass profile;
 	
 	public String enterId() {
 		return RandomStringUtils.randomNumeric(3);
