@@ -151,7 +151,21 @@ Feature: Functional Testing
     And Upload the image from the System
     And Click on Save button
     Then User should be able to view success message after uploading the image
-    
+    @tag12
+    Scenario:Verify whether user is able to create a site
+    Given Enter the URL
+    When Enter username and password
+    And Click on privacy checkbox
+    And Click on Signin button
+    And Click on drop down and select the value
+    And Click on Enter button
+    Then User should be able to view dashboard page
+    And Click on Site module
+    And Click on Allsite submodule
+    And Click on create icon button of site
+    And Enter all the data in create site page
+    And Click on Add button in create site page
+    Then User should be able to view success message of site
     
     
    
