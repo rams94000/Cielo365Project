@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\rams9\AppData\Local\Temp\testng-eclipse--2103888890\testng-customsuite.xml</span>
+                    <span>C:\Users\rams9\AppData\Local\Temp\testng-eclipse-361146851\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">9 methods, 1 failed,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Verify whether user is able to login the application with valid username but invalid password&quot;, &quot;Fu...)">runScenario("Verify whether user is able to login the application with valid username but invalid password", "Fu...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,32 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Delete cardholder having mapped records&quot;, &quot;Functional Testing&quot;)">runScenario("Delete cardholder having mapped records", "Functional Testing")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;View all records on the console&quot;, &quot;Functional Testing&quot;)">runScenario("View all records on the console", "Functional Testing")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Create cardholder with non mandatory fields&quot;, &quot;Functional Testing&quot;)">runScenario("Create cardholder with non mandatory fields", "Functional Testing")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Verify whether user is able to login the application with valid credentials&quot;, &quot;Functional Testing&quot;)">runScenario("Verify whether user is able to login the application with valid credentials", "Functional Testing")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Verify whether user is able to login the application with valid username but invalid password&quot;, &quot;Fu...)">runScenario("Verify whether user is able to login the application with valid username but invalid password", "Fu...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Verify whether user is able to login the application with invalid username but valid password&quot;, &quot;Fu...)">runScenario("Verify whether user is able to login the application with invalid username but valid password", "Fu...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Edit cardholder details&quot;, &quot;Functional Testing&quot;)">runScenario("Edit cardholder details", "Functional Testing")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -118,7 +152,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Verify whether user is able to login the application with invalid username but valid password&quot;, &quot;Fu...)">runScenario("Verify whether user is able to login the application with invalid username but valid password", "Fu...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="RunnerPackage.RunnerClass" class="method navigator-link" hash-for-method="runScenario(&quot;Create cardholder with all mandatory fields after successful login&quot;, &quot;Functional Testing&quot;)">runScenario("Create cardholder with all mandatory fields after successful login", "Functional Testing")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -133,12 +167,72 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">RunnerPackage.RunnerClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify whether user is able to login the application with valid username but invalid password&quot;, &quot;Fu...)">
+                  </a> <!-- runScenario("Verify whether user is able to login the application with valid username but invalid password", "Fu...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify whether user is able to login the application with valid username but invalid password","Functional Testing")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //p[text()=&apos;Invalid credentials. The user account will be locked after 1 failed attempt.&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\rams9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50697}, goog:processID: 22908, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50697/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e5ea4977edecebadd2b3fb4769fc2cb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at StepDefinition.AllSteps.user_should_be_able_to_view_error_message_invalid_credentials_the_user_account_will_be_locked_after_two_failed_attempts(AllSteps.java:174)
+	at ✽.User should be able to view error message Invalid credentials The user account will be locked after two failed attempts(file:///C:/Users/rams9/eclipse-workspace/Cielo365Project/./Feature/Feature.feature:36)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">RunnerPackage.RunnerClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Delete cardholder having mapped records&quot;, &quot;Functional Testing&quot;)">
+                  </a> <!-- runScenario("Delete cardholder having mapped records", "Functional Testing") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Delete cardholder having mapped records","Functional Testing")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;View all records on the console&quot;, &quot;Functional Testing&quot;)">
+                  </a> <!-- runScenario("View all records on the console", "Functional Testing") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("View all records on the console","Functional Testing")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Create cardholder with non mandatory fields&quot;, &quot;Functional Testing&quot;)">
+                  </a> <!-- runScenario("Create cardholder with non mandatory fields", "Functional Testing") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Create cardholder with non mandatory fields","Functional Testing")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Verify whether user is able to login the application with valid credentials&quot;, &quot;Functional Testing&quot;)">
@@ -151,10 +245,20 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify whether user is able to login the application with valid username but invalid password&quot;, &quot;Fu...)">
-                  </a> <!-- runScenario("Verify whether user is able to login the application with valid username but invalid password", "Fu...) -->
+                  <a name="runScenario(&quot;Verify whether user is able to login the application with invalid username but valid password&quot;, &quot;Fu...)">
+                  </a> <!-- runScenario("Verify whether user is able to login the application with invalid username but valid password", "Fu...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify whether user is able to login the application with valid username but invalid password","Functional Testing")</span>
+                  <span class="parameters">("Verify whether user is able to login the application with invalid username but valid password","Functional Testing")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Edit cardholder details&quot;, &quot;Functional Testing&quot;)">
+                  </a> <!-- runScenario("Edit cardholder details", "Functional Testing") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Edit cardholder details","Functional Testing")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -171,10 +275,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify whether user is able to login the application with invalid username but valid password&quot;, &quot;Fu...)">
-                  </a> <!-- runScenario("Verify whether user is able to login the application with invalid username but valid password", "Fu...) -->
+                  <a name="runScenario(&quot;Create cardholder with all mandatory fields after successful login&quot;, &quot;Functional Testing&quot;)">
+                  </a> <!-- runScenario("Create cardholder with all mandatory fields after successful login", "Functional Testing") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify whether user is able to login the application with invalid username but valid password","Functional Testing")</span>
+                  <span class="parameters">("Create cardholder with all mandatory fields after successful login","Functional Testing")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -184,7 +288,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\rams9\AppData\Local\Temp\testng-eclipse--2103888890\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\rams9\AppData\Local\Temp\testng-eclipse-361146851\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -241,28 +345,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'RunnerPackage.RunnerClass')
-data.setCell(0, 3, 19552);
+data.setCell(0, 3, 13138);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'RunnerPackage.RunnerClass')
-data.setCell(1, 3, 17145);
+data.setCell(1, 3, 12725);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'RunnerPackage.RunnerClass')
-data.setCell(2, 3, 10412);
+data.setCell(2, 3, 12133);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'RunnerPackage.RunnerClass')
-data.setCell(3, 3, 10021);
+data.setCell(3, 3, 9738);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'RunnerPackage.RunnerClass')
+data.setCell(4, 3, 8901);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'RunnerPackage.RunnerClass')
+data.setCell(5, 3, 7818);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'RunnerPackage.RunnerClass')
+data.setCell(6, 3, 4655);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'RunnerPackage.RunnerClass')
+data.setCell(7, 3, 3302);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'RunnerPackage.RunnerClass')
+data.setCell(8, 3, 3129);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 57 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -290,28 +414,50 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">RunnerPackage.RunnerClass</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@1cd2ff5b)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@3945886e)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">runScenario("Verify whether user is able to login the application with valid credentials", "Functional Testing")</span>
-                <span class="method-start">970 ms</span>
+                <span class="method-start">269 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Verify whether user is able to login the application with invalid username and invalid password", "...)</span>
-                <span class="method-start">20528 ms</span>
+                <span class="method-start">4926 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Verify whether user is able to login the application with invalid username but valid password", "Fu...)</span>
-                <span class="method-start">30944 ms</span>
+                <span class="method-start">8057 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">runScenario("Verify whether user is able to login the application with valid username but invalid password", "Fu...)</span>
-                <span class="method-start">48091 ms</span>
+                <span class="method-start">11360 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Create cardholder with all mandatory fields after successful login", "Functional Testing")</span>
+                <span class="method-start">24500 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Create cardholder with non mandatory fields", "Functional Testing")</span>
+                <span class="method-start">34239 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Delete cardholder having mapped records", "Functional Testing")</span>
+                <span class="method-start">46965 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Edit cardholder details", "Functional Testing")</span>
+                <span class="method-start">54783 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("View all records on the console", "Functional Testing")</span>
+                <span class="method-start">63685 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">58119 ms</span>
+                <span class="method-start">75822 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

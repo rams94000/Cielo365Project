@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 04 22:56:46 IST 2026</td>
+<td>Started on:</td><td>Mon Mar 16 14:14:17 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>58 seconds (58956 ms)</td>
+<tr><td>Total time:</td><td>76 seconds (76129 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,41 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether user is able to login the application with valid username but invalid password", "Functional Testing"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //p[text()=&apos;Invalid credentials. The user account will be locked after 1 failed attempt.&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\rams9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50697}, goog:processID: 22908, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50697/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e5ea4977edecebadd2b3fb4769fc2cb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at StepDefinition.AllSteps.user_should_be_able_to_view_error_message_invalid_credentials_the_user_account_will_be_locked_after_two_failed_attempts(AllSteps.java:174)
+	at ✽.User should be able to view error message Invalid credentials The user account will be locked after two failed attempts(file:///C:/Users/rams9/eclipse-workspace/Cielo365Project/./Feature/Feature.feature:36)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1146626470", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1146626470'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //p[text()=&apos;Invalid credentials. The user account will be locked after 1 failed attempt.&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\rams9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50697}, goog:processID: 22908, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50697/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e5ea4977edecebadd2b3fb4769fc2cb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at StepDefinition.AllSteps.user_should_be_able_to_view_error_message_invalid_credentials_the_user_account_will_be_locked_after_two_failed_attempts(AllSteps.java:174)
+	at ✽.User should be able to view error message Invalid credentials The user account will be locked after two failed attempts(file:///C:/Users/rams9/eclipse-workspace/Cielo365Project/./Feature/Feature.feature:36)
+</pre></div></td>
+<td>13</td>
+<td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,24 +111,44 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete cardholder having mapped records", "Functional Testing"</td>
+<td></td>
+<td>7</td>
+<td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
+<tr>
+<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View all records on the console", "Functional Testing"</td>
+<td></td>
+<td>12</td>
+<td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
+<tr>
+<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create cardholder with non mandatory fields", "Functional Testing"</td>
+<td></td>
+<td>12</td>
+<td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
+<tr>
 <td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether user is able to login the application with valid credentials", "Functional Testing"</td>
 <td></td>
-<td>19</td>
-<td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
-<tr>
-<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether user is able to login the application with valid username but invalid password", "Functional Testing"</td>
-<td></td>
-<td>10</td>
-<td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
-<tr>
-<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether user is able to login the application with invalid username and invalid password", "Functional Testing"</td>
-<td></td>
-<td>10</td>
+<td>4</td>
 <td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
 <tr>
 <td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether user is able to login the application with invalid username but valid password", "Functional Testing"</td>
 <td></td>
-<td>17</td>
+<td>3</td>
+<td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
+<tr>
+<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit cardholder details", "Functional Testing"</td>
+<td></td>
+<td>8</td>
+<td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
+<tr>
+<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify whether user is able to login the application with invalid username and invalid password", "Functional Testing"</td>
+<td></td>
+<td>3</td>
+<td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
+<tr>
+<td title='RunnerPackage.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: RunnerPackage.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create cardholder with all mandatory fields after successful login", "Functional Testing"</td>
+<td></td>
+<td>9</td>
 <td>RunnerPackage.RunnerClass@7975d1d8</td></tr>
 </table><p>
 </body>

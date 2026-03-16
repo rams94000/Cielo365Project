@@ -21,10 +21,16 @@ public class SignInClass {
 	private By Click_Enter_button=By.xpath("//button[@type='submit']/descendant::span[text()='Enter']");
 	private By print_error_msg_of_invalid_username=By.xpath("//p[normalize-space()='Invalid credentials']");
 	private By print_error_msg_of_valid_password=By.xpath("//p[normalize-space()='Invalid credentials']");
-	
+	private By print_error_msg_of_Invalid_password=By.xpath("//p[text()='Invalid credentials. The user account will be locked after 1 failed attempt.']");
 	
 
 	
+	
+	
+	
+	public By getPrint_error_msg_of_Invalid_password() {
+		return print_error_msg_of_Invalid_password;
+	}
 	public By getPrint_error_msg_of_valid_password() {
 		return print_error_msg_of_valid_password;
 	}
