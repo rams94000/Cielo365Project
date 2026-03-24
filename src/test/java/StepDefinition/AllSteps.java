@@ -32,6 +32,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PageObjectModel.Cardholder;
+import PageObjectModel.Departments;
 import PageObjectModel.SignInClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -82,6 +83,7 @@ public class AllSteps extends BaseCalss2 {
 		driver.get(pro.getProperty("url"));
 		sign = new SignInClass(driver);
 		card=new Cardholder(driver);
+		dep=new Departments(driver);
 
 	}
 
@@ -171,7 +173,7 @@ public class AllSteps extends BaseCalss2 {
 	@Then("User should be able to view error message Invalid credentials The user account will be locked after two failed attempts")
 	public void user_should_be_able_to_view_error_message_invalid_credentials_the_user_account_will_be_locked_after_two_failed_attempts() {
 		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		WebElement error_msg_of_invalidPassword=wait.until(ExpectedConditions.elementToBeClickable(sign.getPrint_error_msg_of_Invalid_password()));
+		WebElement error_msg_of_invalidPassword=wait.until(ExpectedConditions.visibilityOfElementLocated(sign.getPrint_error_msg_of_Invalid_password()));
 		String print_error_msg_of_invalidPassword=error_msg_of_invalidPassword.getText();
 		System.out.println("Error Message of invalid password"+print_error_msg_of_invalidPassword);
 	}
@@ -373,6 +375,84 @@ public class AllSteps extends BaseCalss2 {
 	
 	}
 	
+	
+	// Test cases for Department module
+	
+	@When("Click on Departments submodule")
+	public void click_on_departments_submodule() {
+	   wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	   WebElement Click_on_department_submodule=wait.until(ExpectedConditions.elementToBeClickable(dep.getClick_on_Departments_submodule()));
+	   Click_on_department_submodule.click();
+		
+	}
+	@When("Click on Add icon buttton of department list page")
+	public void click_on_add_icon_buttton_of_department_list_page() {
+	    
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement Click_on_Department_add_icon_button=wait.until(ExpectedConditions.elementToBeClickable(dep.getClick_on_Departments_Addicon_button()));
+		Click_on_Department_add_icon_button.click();
+	}
+	@When("Enter all mandatory fields in department create page")
+	public void enter_all_mandatory_fields_in_department_create_page() {
+	 wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	 WebElement Enter_departmentname_on_nameTextfields=	wait.until(ExpectedConditions.visibilityOfElementLocated(dep.getEnter_Departmentname_on_departmentTextfields()));
+	 Enter_departmentname_on_nameTextfields.sendKeys(enterFirstName());
+	 
+	 wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	 WebElement Enter_departmentcode_on_codeTextfields=	wait.until(ExpectedConditions.visibilityOfElementLocated(dep.getEnter_Departmentcode_on_codeTextfields()));
+	 Enter_departmentcode_on_codeTextfields.sendKeys(enterFirstName());
+		
+		
+	}
+	@When("Click on Add button in department create page")
+	public void click_on_add_button_in_department_create_page() {
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement Click_on_addiconButtonOfDepartment=	wait.until(ExpectedConditions.elementToBeClickable(dep.getClick_on_Addicon_button_Department()));
+		Click_on_addiconButtonOfDepartment.click();
+		
+		
+		
+	}
+	@Then("the user should be able to view department created successfully message")
+	public void the_user_should_be_able_to_view_department_created_successfully_message() {
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement Print_Success_message_of_Department=wait.until(ExpectedConditions.visibilityOfElementLocated(dep.getPrint_success_message_of_Department()));
+		String Success_Message=Print_Success_message_of_Department.getText();
+		System.out.println(Success_Message);
+		
+		
+	}
+	
+	@When("Click On Departments edit button")
+	public void click_on_departments_edit_button() {
+	    wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	    WebElement Click_on_edit_button_ofDepartment= wait.until(ExpectedConditions.elementToBeClickable(dep.getClick_on_Department_edit_button()));
+	    Click_on_edit_button_ofDepartment.click();
+		
+	}
+	@When("Edit the data of Departments")
+	public void edit_the_data_of_departments() {
+		 wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		 WebElement Enter_departmentname_on_nameTextfields=	wait.until(ExpectedConditions.visibilityOfElementLocated(dep.getEnter_Departmentname_on_departmentTextfields()));
+		 Enter_departmentname_on_nameTextfields.sendKeys(enterFirstName());
+		
+	}
+	@When("Click on edit button of departments")
+	public void click_on_edit_button_of_departments() {
+		 wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		 WebElement Click_edit_button_ofDepartmengt=wait.until(ExpectedConditions.elementToBeClickable(dep.getClick_on_Department_save_button()));
+		 Click_edit_button_ofDepartmengt.click();
+		
+	}
+	@Then("the user should be able to view Department edited successfully")
+	public void the_user_should_be_able_to_view_department_edited_successfully() {
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		 WebElement Click_edit_button_ofDepartmengt=wait.until(ExpectedConditions.elementToBeClickable(dep.getPrintSuccessedit_message()));
+		 String successEdit=Click_edit_button_ofDepartmengt.getText();
+		 System.out.println(successEdit);
+		
+	}
+
 	
 	
 	

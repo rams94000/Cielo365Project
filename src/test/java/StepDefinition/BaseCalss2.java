@@ -7,12 +7,15 @@ import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 
 import PageObjectModel.Cardholder;
+import PageObjectModel.Departments;
 import PageObjectModel.SignInClass;
 public class BaseCalss2 {
 	public WebDriver driver;
 	public SignInClass sign;
 	public Cardholder card;
+	public Departments dep;
 	public Properties pro;
+	
 
 	
 	public String enterId() {

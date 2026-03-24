@@ -103,6 +103,36 @@ Feature: Functional Testing
     And Click on cardholder module
     And Click on cardholder submodule
     Then Scroll the cardholder page
+    
+    @tag10
+    Scenario: Create Department with mandatory fields
+    Given Enter the URL
+    When Enter username and password
+    And Click on privacy checkbox
+    And Click on Signin button
+    And Click on drop down and select the value
+    And Click on Enter button
+    And Click on cardholder module
+    And Click on Departments submodule
+    And Click on Add icon buttton of department list page
+    And Enter all mandatory fields in department create page
+    And Click on Add button in department create page
+    Then the user should be able to view department created successfully message
+    
+    @tag11
+    Scenario: Edit the Departments data
+    Given Enter the URL
+    When Enter username and password
+    And Click on privacy checkbox
+    And Click on Signin button
+    And Click on drop down and select the value
+    And Click on Enter button
+    And Click on cardholder module
+    And Click on Departments submodule
+    And Click On Departments edit button
+    And Edit the data of Departments
+    And Click on edit button of departments
+    Then the user should be able to view Department edited successfully
    
     
     
