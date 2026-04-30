@@ -23,6 +23,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -33,6 +34,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PageObjectModel.Cardholder;
 import PageObjectModel.Departments;
+import PageObjectModel.Profile;
 import PageObjectModel.SignInClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -84,6 +86,7 @@ public class AllSteps extends BaseCalss2 {
 		sign = new SignInClass(driver);
 		card=new Cardholder(driver);
 		dep=new Departments(driver);
+		porfile=new Profile(driver);
 
 	}
 
@@ -452,6 +455,43 @@ public class AllSteps extends BaseCalss2 {
 		 System.out.println(successEdit);
 		
 	}
+	
+	@When("Click on profile icon button")
+	public void click_on_profile_icon_button() {
+	    wait=new WebDriverWait(driver,Duration.ofSeconds(15));
+	    WebElement click_on_profile=wait.until(ExpectedConditions.elementToBeClickable(porfile.getClick_on_profile()));
+	    click_on_profile.click();
+		
+	}
+	@When("Click on my profile")
+	public void click_on_my_profile() throws InterruptedException {
+	    wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	    WebElement click_on_MyProfile=wait.until(ExpectedConditions.elementToBeClickable(porfile.getClick_on_MyProfile()));
+	    click_on_MyProfile.click();
+		
+	}
+	@When("Edit the data of profile")
+	public void edit_the_data_of_profile() {
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement enetername=wait.until(ExpectedConditions.elementToBeClickable(porfile.getEnterlastname()));
+		enetername.sendKeys(enetrLastName());
+		
+	}
+	@When("Click on Save button of profile")
+	public void click_on_save_button_of_profile() {
+		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	    WebElement click_on_SaveButton=wait.until(ExpectedConditions.elementToBeClickable(porfile.getClick_on_saveButton()));
+	    click_on_SaveButton.click();
+		
+	}
+	@Then("User should be able to view profile updated successfully")
+	public void user_should_be_able_to_view_profile_updated_successfully() {
+	    wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	    WebElement message=wait.until(ExpectedConditions.elementToBeClickable(porfile.getPrintMessage()));
+	    String SuccessMessage=message.getText();
+	    System.out.println(SuccessMessage);
+		
+	}
 
 	
 	
@@ -468,5 +508,6 @@ public class AllSteps extends BaseCalss2 {
 
 	}
 
+	
 	
 }

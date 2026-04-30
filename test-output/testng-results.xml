@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-21T12:28:34 IST" name="Default suite" finished-at="2026-03-21T12:28:50 IST" duration-ms="16452">
+  <suite started-at="2026-04-30T17:51:17 IST" name="Default suite" finished-at="2026-04-30T17:52:06 IST" duration-ms="49550">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunnerPackage.RunnerClass@7975d1d8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-03-21T12:28:34 IST" name="Default test" finished-at="2026-03-21T12:28:50 IST" duration-ms="16452">
+    <test started-at="2026-04-30T17:51:17 IST" name="Default test" finished-at="2026-04-30T17:52:06 IST" duration-ms="49550">
       <class name="RunnerPackage.RunnerClass">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:RunnerPackage.RunnerClass@7975d1d8]" started-at="2026-03-21T12:28:34 IST" name="setUpClass" finished-at="2026-03-21T12:28:34 IST" duration-ms="445" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:RunnerPackage.RunnerClass@7975d1d8]" started-at="2026-04-30T17:51:17 IST" name="setUpClass" finished-at="2026-04-30T17:51:17 IST" duration-ms="255" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@28babeca]]>
+                <![CDATA[org.testng.TestRunner@1cde374]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunnerPackage.RunnerClass@7975d1d8]" started-at="2026-03-21T12:28:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-03-21T12:28:49 IST" duration-ms="15108" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunnerPackage.RunnerClass@7975d1d8]" started-at="2026-04-30T17:51:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-04-30T17:52:06 IST" duration-ms="49062" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Edit the Departments data"]]>
+                <![CDATA["Verify user is able to update the profile"]]>
               </value>
             </param>
             <param index="1">
@@ -34,10 +34,33 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //p[text()='Profile updated successfully. Please re-login to see changes.'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.103, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\rams9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52300}, goog:processID: 25392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52300/devtoo..., se:cdpVersion: 147.0.7727.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bce7ab3b00e2be77ec21befa1ae7f967]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //p[text()='Profile updated successfully. Please re-login to see changes.'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.103, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\rams9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52300}, goog:processID: 25392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52300/devtoo..., se:cdpVersion: 147.0.7727.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bce7ab3b00e2be77ec21befa1ae7f967
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at StepDefinition.AllSteps.user_should_be_able_to_view_profile_updated_successfully(AllSteps.java:490)
+at ✽.User should be able to view profile updated successfully(file:///C:/Users/rams9/eclipse-workspace/Cielo365Project/./Feature/Feature.feature:149)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:RunnerPackage.RunnerClass@7975d1d8]" started-at="2026-03-21T12:28:49 IST" name="tearDownClass" finished-at="2026-03-21T12:28:50 IST" duration-ms="845" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:RunnerPackage.RunnerClass@7975d1d8]" started-at="2026-04-30T17:52:06 IST" name="tearDownClass" finished-at="2026-04-30T17:52:06 IST" duration-ms="203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

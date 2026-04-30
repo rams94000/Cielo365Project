@@ -133,6 +133,20 @@ Feature: Functional Testing
     And Edit the data of Departments
     And Click on edit button of departments
     Then the user should be able to view Department edited successfully
+    
+    @tag12
+    Scenario: Verify user is able to update the profile
+    Given Enter the URL
+    When Enter username and password
+    And Click on privacy checkbox
+    And Click on Signin button
+    And Click on drop down and select the value
+    And Click on Enter button
+    And Click on profile icon button
+    And Click on my profile
+    And Edit the data of profile
+    And Click on Save button of profile
+    Then User should be able to view profile updated successfully
    
     
     

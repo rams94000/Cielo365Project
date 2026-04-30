@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 		          glue="StepDefinition",
 		          monochrome=true,
 		          dryRun=false,
-		          tags="@tag11",
+		          tags="@tag12",
 		          plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}          
 		)
 

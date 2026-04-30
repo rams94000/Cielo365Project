@@ -8,12 +8,14 @@ import org.openqa.selenium.WebDriver;
 
 import PageObjectModel.Cardholder;
 import PageObjectModel.Departments;
+import PageObjectModel.Profile;
 import PageObjectModel.SignInClass;
 public class BaseCalss2 {
 	public WebDriver driver;
 	public SignInClass sign;
 	public Cardholder card;
 	public Departments dep;
+	public Profile porfile;
 	public Properties pro;
 	
 
